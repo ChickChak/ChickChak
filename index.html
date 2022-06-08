@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<meta charset="utf-8" />
+
+	<title>The early registration to the ChikChak service</title>
+	<link rel="icon" type="image/x-icon" href="logo.ico" />
+
+	<meta property="og:title" content="The early registration to the ChikChak service" />
+	<meta property="og:url" content="https://chikchak.github.io/chikchak" />
+	<meta property="og:image" content="https://chikchak.github.io/chikchak/logo.jpg" />
+	<meta property="og:description" content="The early registration to the ChikChak service will end by 31/12/2022" />
+
+	<link rel="stylesheet" type="text/css" href="my.css" />
+
+	<!-- תחילת כפתור שלח-->
+	<!-- https://codepen.io/valentingalmand/pen/MYMZZK -->
+	<link rel="stylesheet" type="text/css" href="button_submit.css" />
+	<script async src="button_submit.js"></script>
+	<!-- סוף כפתור שלח-->
+	<style>
+		.box {
+			display: flex;
+			flex-wrap: wrap;
+			flex-flow: row wrap;
+			row-gap: 10px;
+			column-gap: 20px;
+			width: 900px;
+			grid-template-columns: auto auto auto;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+		}
+
+		.box>* {
+			flex: 1 1 30%;
+			align-items: center;
+		}
+
+		.col-centered
+{
+	display: inline-block;
+    	float: none;
+    	text-align: left;
+    	margin-right: -4px;
+}
+	</style>
+</head>
+
+<body style="margin: auto 0;">
+	<iframe name="hiddenFrame" style="display: none"></iframe>
+
+	<img id="invitation" src="invitation.webp" alt="" />
+
+	<form id="myForm" method="POST" target="hiddenFrame"
+		action="https://docs.google.com/forms/u/0/d/e/<CHANGE TO THE CORRECT URL>/formResponse" class="box">
+		<div class="column2">
+			<input required type="text" name="entry.418658240" placeholder="שם פרטי" />
+		</div>
+		<div class="column2">
+			<input required type="text" name="entry.1184645067" placeholder="שם משפחה" />
+		</div>
+		<br />
+		<div class="column2">
+			<input type="tel" pattern="[0-9-]+" name="entry.267391440" placeholder="מספר טלפון" />
+		</div>
+		<div class="column2">
+			<input type="text" name="entry.2673914406" placeholder="חברה" />
+		</div>
+		<div class="column2">
+			<input type="email" name="entry.26739144006" placeholder="דואר אלקטרוני" />
+		</div>
+		<div class="column2">
+			<input type="text" name="entry.267239144006" placeholder="כתובת" />
+		</div>
+		<div class="column2">
+			<label for="participants">מספר משתתפים</label>
+			<input value="&minus;" type="button" class="button_minus"
+				onclick="this.parentNode.querySelector('input[type=number]').stepDown()" /><input type="number" min="0"
+				value="0" id="participants" name="entry.1529437361" /><input value="&plus;" type="button"
+				class="button_plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" />
+		</div>
+		<br />
+		<div class="column2">
+			<!-- <input type="submit" value="שלח" /> -->
+			<button id="button" type="submit"></button>
+		</div>
+	</form>
+</body>
+
+</html>
