@@ -15,81 +15,131 @@
 	<meta property="og:image" content="https://chikchak.github.io/chikchak/logo.jpg" />
 	<meta property="og:description" content="The early registration to the ChikChak service will end by 31/12/2022" />
 
-	<link rel="stylesheet" type="text/css" href="my.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="my.css" /> -->
 
 	<!-- תחילת כפתור שלח-->
 	<!-- https://codepen.io/valentingalmand/pen/MYMZZK -->
-	<link rel="stylesheet" type="text/css" href="button_submit.css" />
-	<script async src="button_submit.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="button_submit.css" /> -->
+	<!-- <script async src="button_submit.js"></script> -->
 	<!-- סוף כפתור שלח-->
 	<style>
+		.center {
+			text-align: center;
+		}
+
 		.box {
 			display: flex;
-			flex-wrap: wrap;
+			/* flex-wrap: wrap; */
 			flex-flow: row wrap;
 			row-gap: 10px;
 			column-gap: 20px;
 			width: 900px;
-			grid-template-columns: auto auto auto;
-  padding: 10px;
-  align-items: center;
-  justify-content: center;
+			/* grid-template-columns: auto auto auto; */
+			padding: 10px;
+			/* align-items: center; */
+			justify-content: center;
+			margin: auto;
 		}
 
 		.box>* {
 			flex: 1 1 30%;
-			align-items: center;
+			/* align-items: center; */
 		}
 
-		.col-centered
-{
-	display: inline-block;
-    	float: none;
-    	text-align: left;
-    	margin-right: -4px;
-}
+		/* .box>*>input {
+			display: list-item;
+		} */
+
+		.logo {
+			max-width: 98%;
+		}
+
+		.formDetails {
+			max-width: 30%;
+			text-align: center;
+			border: 1px solid #33dddd;
+			/* #ccc; */
+			font-weight: bold;
+			font-size: 1.25rem;
+		}
+
+		/* input[type="tel"],
+		input[type="text"] {
+			width: 240px;
+		}
+
+		input[type="number"] {
+			/* margin: 0; */
+		/*-moz-appearance: textfield;
+			width: 40px;
+		} */
+
+		.submitButton {
+			outline: none;
+			height: 40px;
+			text-align: center;
+			width: 130px;
+			border-radius: 40px;
+			background: #fff;
+			border: 2px solid #33dddd;
+			/* #1ecd97; */
+			color: #33dddd;
+			/* #1ecd97; */
+			letter-spacing: 1px;
+			text-shadow: 0;
+			font-size: 20px;
+			/* 12px; */
+			font-weight: bold;
+			cursor: pointer;
+			transition: all 0.25s ease;
+		}
+
+		.submitButton:hover {
+			color: white;
+			background: #33dddd;
+			/* #1ecd97; */
+		}
+
+		.submitButton:active {
+			letter-spacing: 12px;
+		}
 	</style>
 </head>
 
-<body style="margin: auto 0;">
+<body>
+	<header class="center">
+		<img id="invitation" src="invitation.webp" alt="" class="logo" />
+	</header>
+
 	<iframe name="hiddenFrame" style="display: none"></iframe>
-
-	<img id="invitation" src="invitation.webp" alt="" />
-
-	<form id="myForm" method="POST" target="hiddenFrame"
-		action="https://docs.google.com/forms/u/0/d/e/<CHANGE TO THE CORRECT URL>/formResponse" class="box">
-		<div class="column2">
-			<input required type="text" name="entry.418658240" placeholder="שם פרטי" />
-		</div>
-		<div class="column2">
-			<input required type="text" name="entry.1184645067" placeholder="שם משפחה" />
-		</div>
-		<br />
-		<div class="column2">
-			<input type="tel" pattern="[0-9-]+" name="entry.267391440" placeholder="מספר טלפון" />
-		</div>
-		<div class="column2">
-			<input type="text" name="entry.2673914406" placeholder="חברה" />
-		</div>
-		<div class="column2">
-			<input type="email" name="entry.26739144006" placeholder="דואר אלקטרוני" />
-		</div>
-		<div class="column2">
-			<input type="text" name="entry.267239144006" placeholder="כתובת" />
-		</div>
-		<div class="column2">
+	<main>
+		<form id="myForm" method="POST" target="hiddenFrame" class="box" action="https://docs.google.com/forms/d/1BWHICPBMWtqQ0WVd685Phcl5b9lIp5qE2-fs1-MOWDE/edit?usp=drive_open">
+			<!-- action="https://docs.google.com/forms/u/0/d/e/<CHANGE TO THE CORRECT URL>/formResponse"> -->
+			<!-- <main> -->
+			<input required="required" type="text" name="entry.418658240" placeholder="שם פרטי" class="formDetails" />
+			<input required="required" type="text" name="entry.1184645067" placeholder="שם משפחה" class="formDetails" />
+			<input type="tel" pattern="[0-9-]+" name="entry.267391440" placeholder="מספר טלפון" class="formDetails" />
+			<input type="text" name="entry.2673914406" placeholder="חברה" class="formDetails" />
+			<input type="email" name="entry.26739144006" placeholder="דואר אלקטרוני" class="formDetails" />
+			<input type="text" name="entry.267239144006" placeholder="כתובת" class="formDetails" />
+			<!-- </main> -->
+			<!-- <footer style="text-align: center;"> -->
+			<!-- <div class="column2"> -->
+			<!-- <input type="submit" value="שלח" /> -->
+			<button id="button" type="submit" class="submitButton">שלח</button>
+			<!-- </div> -->
+			<!-- </footer> -->
+			<!-- <div class="column2">
 			<label for="participants">מספר משתתפים</label>
-			<input value="&minus;" type="button" class="button_minus"
+				<input value="&minus;" type="button" class="button_minus"
 				onclick="this.parentNode.querySelector('input[type=number]').stepDown()" /><input type="number" min="0"
 				value="0" id="participants" name="entry.1529437361" /><input value="&plus;" type="button"
 				class="button_plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" />
-		</div>
+				</div>
 		<br />
-		<div class="column2">
-			<!-- <input type="submit" value="שלח" /> -->
-			<button id="button" type="submit"></button>
-		</div>
-	</form>
+				
+		</form>
+	</main>
 </body>
 
 </html>
