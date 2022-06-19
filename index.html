@@ -20,7 +20,7 @@
 	<!-- תחילת כפתור שלח-->
 	<!-- https://codepen.io/valentingalmand/pen/MYMZZK -->
 	<!-- <link rel="stylesheet" type="text/css" href="button_submit.css" /> -->
-	<!-- <script async src="button_submit.js"></script> -->
+	<script async src="button_submit.js"></script>
 	<!-- סוף כפתור שלח-->
 	<style>
 		.center {
@@ -57,10 +57,12 @@
 		.formDetails {
 			max-width: 30%;
 			text-align: center;
-			border: 1px solid #33dddd;
+			border: 2px solid #33dddd;
 			/* #ccc; */
 			font-weight: bold;
 			font-size: 1.25rem;
+			border-radius: 20px;
+			/* border: 2px solid #73AD21; */
 		}
 
 		/* input[type="tel"],
@@ -113,14 +115,41 @@
 
 	<iframe name="hiddenFrame" style="display: none"></iframe>
 	<main>
-		<form id="myForm" method="POST" target="hiddenFrame" class="box" action="https://docs.google.com/forms/d/1BWHICPBMWtqQ0WVd685Phcl5b9lIp5qE2-fs1-MOWDE/edit?usp=drive_open">
+		<form id="myForm" method="GET" target="hiddenFrame" class="box"
+			action="https://docs.google.com/forms/u/0/d/e/1BWHICPBMWtqQ0WVd685Phcl5b9lIp5qE2-fs1-MOWDE/formResponse">
+			<!-- https://docs.google.com/forms/d/1BWHICPBMWtqQ0WVd685Phcl5b9lIp5qE2-fs1-MOWDE/edit?usp=drive_open - CHIK CHAK-->
+			<!-- https://docs.google.com/forms/u/0/d/e/1FAIpQLSelMnFN2Y-_RBQw2bcHDDjKUxSlrSS45JMfSl0quWGQCZkDaQ/formResponse - YITSHAK -->
 			<!-- action="https://docs.google.com/forms/u/0/d/e/<CHANGE TO THE CORRECT URL>/formResponse"> -->
+			<!-- https://docs.google.com/forms/d/e/1FAIpQLSfum0n8qXkDzJTQsqu6hyNAoP4g3QCpxW_XrbalBpji7moj0A/viewform?usp=pp_url&entry.1882388565=First+Name&entry.2068411006=Last+Name&entry.1376392945=email@email.email&entry.1425906172=%D7%90%D7%99%D7%A4%D7%95%D7%A8&entry.1425906172=%D7%A2%D7%99%D7%A6%D7%95%D7%91+%D7%A9%D7%99%D7%A2%D7%A8&entry.1425906172=%D7%A4%D7%93%D7%99%D7%A7%D7%95%D7%A8,+%D7%9E%D7%A0%D7%99%D7%A7%D7%95%D7%A8+%D7%95%D7%91%D7%A0%D7%99%D7%99%D7%AA+%D7%A6%D7%99%D7%A4%D7%95%D7%A8%D7%A0%D7%99%D7%99%D7%9D&entry.1425906172=%D7%A2%D7%99%D7%A6%D7%95%D7%91+%D7%92%D7%91%D7%95%D7%AA&entry.1425906172=%D7%A7%D7%95%D7%A1%D7%9E%D7%98%D7%99%D7%A7%D7%94&entry.1425906172=__other_option__&entry.1425906172.other_option_response=OTHER&entry.2082272578=%D7%90%D7%A0%D7%99+%D7%9E%D7%A1%D7%9B%D7%99%D7%9D/%D7%94+%D7%9C%D7%A8%D7%99%D7%A9%D7%95%D7%9D+%D7%A4%D7%A8%D7%98%D7%99%D7%99+%D7%91%D7%9E%D7%90%D7%92%D7%A8+%D7%9E%D7%99%D7%93%D7%A2+%D7%9C%D7%A6%D7%95%D7%A8%D7%9A+%D7%A7%D7%91%D7%9C%D7%AA+%D7%93%D7%99%D7%95%D7%95%D7%A8+%D7%99%D7%A9%D7%99%D7%A8+%D7%A9%D7%9C+%D7%9B%D7%9C+%D7%93%D7%91%D7%A8+%D7%A4%D7%A8%D7%A1%D7%95%D7%9E%D7%AA+%D7%95%D7%A2%D7%93%D7%9B%D7%95%D7%A0%D7%99%D7%9D+%D7%9E%D7%90%D7%A4%D7%9C%D7%99%D7%A7%D7%A6%D7%99%D7%99%D7%AA+%22%D7%A6'%D7%99%D7%A7-%D7%A6'%D7%90%D7%A7%22,+%D7%91%D7%9B%D7%9C+%D7%90%D7%9E%D7%A6%D7%A2%D7%99+%D7%94%D7%9E%D7%93%D7%99%D7%94+%D7%94%D7%A9%D7%95%D7%A0%D7%99%D7%9D+(%D7%9C%D7%A8%D7%91%D7%95%D7%AA+%D7%93%D7%95%D7%90%22%D7%9C,+SMS,+%D7%A8%D7%A9%D7%AA%D7%95%D7%AA+%D7%97%D7%91%D7%A8%D7%AA%D7%99%D7%95%D7%AA+%D7%95%D7%9B%D7%99%D7%95%D7%A6%22%D7%91)+%D7%95%D7%9B%D7%9F+%D7%9E%D7%90%D7%A9%D7%A8/%D7%AA+%D7%9B%D7%99+%D7%A7%D7%A8%D7%90%D7%AA%D7%99+%D7%95%D7%90%D7%A0%D7%99+%D7%9E%D7%A1%D7%9B%D7%99%D7%9D/%D7%94+%D7%9C%D7%AA%D7%A0%D7%90%D7%99+%D7%94%D7%A9%D7%99%D7%9E%D7%95%D7%A9. -->
+			<!-- https://docs.google.com/forms/d/e/1FAIpQLSfum0n8qXkDzJTQsqu6hyNAoP4g3QCpxW_XrbalBpji7moj0A/viewform?usp=pp_url&
+				entry.1882388565=First+Name
+				&
+				entry.2068411006=Last+Name
+				&
+				entry.1376392945=email@email.email
+				&
+				entry.1425906172=%D7%90%D7%99%D7%A4%D7%95%D7%A8
+				&
+				entry.1425906172=%D7%A2%D7%99%D7%A6%D7%95%D7%91+%D7%A9%D7%99%D7%A2%D7%A8
+				&
+				entry.1425906172=%D7%A4%D7%93%D7%99%D7%A7%D7%95%D7%A8,+%D7%9E%D7%A0%D7%99%D7%A7%D7%95%D7%A8+%D7%95%D7%91%D7%A0%D7%99%D7%99%D7%AA+%D7%A6%D7%99%D7%A4%D7%95%D7%A8%D7%A0%D7%99%D7%99%D7%9D
+				&
+				entry.1425906172=%D7%A2%D7%99%D7%A6%D7%95%D7%91+%D7%92%D7%91%D7%95%D7%AA
+				&
+				entry.1425906172=%D7%A7%D7%95%D7%A1%D7%9E%D7%98%D7%99%D7%A7%D7%94
+				&
+				entry.1425906172=__other_option__
+				&
+				entry.1425906172.other_option_response=OTHER
+				&
+				entry.2082272578=%D7%90%D7%A0%D7%99+%D7%9E%D7%A1%D7%9B%D7%99%D7%9D/%D7%94+%D7%9C%D7%A8%D7%99%D7%A9%D7%95%D7%9D+%D7%A4%D7%A8%D7%98%D7%99%D7%99+%D7%91%D7%9E%D7%90%D7%92%D7%A8+%D7%9E%D7%99%D7%93%D7%A2+%D7%9C%D7%A6%D7%95%D7%A8%D7%9A+%D7%A7%D7%91%D7%9C%D7%AA+%D7%93%D7%99%D7%95%D7%95%D7%A8+%D7%99%D7%A9%D7%99%D7%A8+%D7%A9%D7%9C+%D7%9B%D7%9C+%D7%93%D7%91%D7%A8+%D7%A4%D7%A8%D7%A1%D7%95%D7%9E%D7%AA+%D7%95%D7%A2%D7%93%D7%9B%D7%95%D7%A0%D7%99%D7%9D+%D7%9E%D7%90%D7%A4%D7%9C%D7%99%D7%A7%D7%A6%D7%99%D7%99%D7%AA+%22%D7%A6'%D7%99%D7%A7-%D7%A6'%D7%90%D7%A7%22,+%D7%91%D7%9B%D7%9C+%D7%90%D7%9E%D7%A6%D7%A2%D7%99+%D7%94%D7%9E%D7%93%D7%99%D7%94+%D7%94%D7%A9%D7%95%D7%A0%D7%99%D7%9D+(%D7%9C%D7%A8%D7%91%D7%95%D7%AA+%D7%93%D7%95%D7%90%22%D7%9C,+SMS,+%D7%A8%D7%A9%D7%AA%D7%95%D7%AA+%D7%97%D7%91%D7%A8%D7%AA%D7%99%D7%95%D7%AA+%D7%95%D7%9B%D7%99%D7%95%D7%A6%22%D7%91)+%D7%95%D7%9B%D7%9F+%D7%9E%D7%90%D7%A9%D7%A8/%D7%AA+%D7%9B%D7%99+%D7%A7%D7%A8%D7%90%D7%AA%D7%99+%D7%95%D7%90%D7%A0%D7%99+%D7%9E%D7%A1%D7%9B%D7%99%D7%9D/%D7%94+%D7%9C%D7%AA%D7%A0%D7%90%D7%99+%D7%94%D7%A9%D7%99%D7%9E%D7%95%D7%A9. -->
+
 			<!-- <main> -->
-			<input required="required" type="text" name="entry.418658240" placeholder="שם פרטי" class="formDetails" />
-			<input required="required" type="text" name="entry.1184645067" placeholder="שם משפחה" class="formDetails" />
+			<input required="required" type="text" name="entry.1882388565" placeholder="שם פרטי" class="formDetails" />
+			<input required="required" type="text" name="entry.2068411006" placeholder="שם משפחה" class="formDetails" />
 			<input type="tel" pattern="[0-9-]+" name="entry.267391440" placeholder="מספר טלפון" class="formDetails" />
 			<input type="text" name="entry.2673914406" placeholder="חברה" class="formDetails" />
-			<input type="email" name="entry.26739144006" placeholder="דואר אלקטרוני" class="formDetails" />
+			<input required="required" type="email" name="entry.1376392945" placeholder="דואר אלקטרוני" class="formDetails" />
 			<input type="text" name="entry.267239144006" placeholder="כתובת" class="formDetails" />
 			<!-- </main> -->
 			<!-- <footer style="text-align: center;"> -->
@@ -137,8 +166,10 @@
 				class="button_plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" />
 				</div>
 		<br />
-				
+			-->
 		</form>
+		<a>תנאי שימוש</a>
+		<a>מדיניות פרטיות</a>
 	</main>
 </body>
 
